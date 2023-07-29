@@ -1,23 +1,17 @@
 "use client";
 import CategoryTag from "@/components/CategoryTag";
 import { MenuContext } from "@/contexts/MenuContext";
+import useMenuNavigation from "@/hooks/useMenuNavigation";
 import { FoodCategory } from "@prisma/client";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 interface MenuNavigationTagsProps {
   foodCategories: FoodCategory[];
 }
 const MenuNavigationTags = ({ foodCategories }: MenuNavigationTagsProps) => {
-  const { selectedTag, setSelectedTag } = useContext(MenuContext);
-  const handleCategoryTagClick = (foodCategory: FoodCategory) => {
-    if (selectedTag === foodCategory) {
-      setSelectedTag(null); // Desmarca a categoria se ela já estiver selecionada
-    } else {
-      setSelectedTag(foodCategory); // Marca a categoria se ela não estiver selecionada
-    }
-  };
+  const { NavigationTagsClasses, selectedTag, handleCategoryTagClick } = useMenuNavigation()
   return (
-    <div className="flex gap-2 items-center overflow-x-hidden">
+    <div className={`flex gap-2 items-center overflow-x-hidden ${NavigationTagsClasses}`}>
       {foodCategories.map((foodCategory) => (
         <CategoryTag
           foodCategory={foodCategory}
