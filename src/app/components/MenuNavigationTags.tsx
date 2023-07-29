@@ -10,7 +10,7 @@ const MenuNavigationTags = ({ foodCategories }: MenuNavigationTagsProps) => {
   const { searchIsOpen, selectedTag, handleCategoryTagClick } = useMenuNavigation()
   const NavigationTagsClasses = searchIsOpen ? "hidden" : ''
   return (
-    <div className={`flex gap-4 items-center overflow-x-auto scrollbar-none ${NavigationTagsClasses}`}>
+    <div className={`flex gap-2 items-center overflow-x-auto scrollbar-none ${NavigationTagsClasses}`}>
       {foodCategories.map((foodCategory) => (
         <CategoryTag
           foodCategory={foodCategory}

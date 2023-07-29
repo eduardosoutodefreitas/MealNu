@@ -17,7 +17,7 @@ const ThemeSwitcher = () => {
     }
 
     return (
-        <div>
+        <>
             {theme === "dark" ? (
                 <button onClick={() => setTheme("light")}>
                     <MdLightMode size={20} />
@@ -27,7 +27,7 @@ const ThemeSwitcher = () => {
                     <MdDarkMode size={20} />
                 </button>
             )}
-        </div>
+        </>
     )
 }
 export default ThemeSwitcher

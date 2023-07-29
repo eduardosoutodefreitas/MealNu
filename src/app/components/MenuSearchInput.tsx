@@ -13,7 +13,7 @@ const MenuSearchInput = () => {
         autoFocus={true}
         type="text"
         placeholder="Pesquisar"
-        className="text-sm outline-none border-none w-5/6 placeholder:text-lightGray placeholder:text-xs"
+        className="text-sm bg-transparent outline-none border-none w-5/6 placeholder:text-lightGray placeholder:text-xs"
       />
       <button onClick={handleButtonClick} className="text-specialOrange">
         <AiOutlineClose size={20} />

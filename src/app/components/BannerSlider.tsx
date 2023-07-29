@@ -19,7 +19,7 @@ const BannerSlider = ({ banners }: BannerSliderProps) => {
             spaceBetween={20}
             centeredSlides={true}
             autoplay={{
-                delay: 4500,
+                delay: 3500,
                 disableOnInteraction: false,
             }}
 

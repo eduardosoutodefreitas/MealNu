@@ -21,17 +21,17 @@ const DishDescriptionDetails = ({
         <h2 className="mb-2 font-semibold">{name}</h2>
         <p className="text-sm mb-3">{description}</p>
       </div>
-      <div className="text-sm font-semibold mb-5">
+      <div className="font-semibold mb-5">
         <div className="flex justify-between items-center mb-1">
           <div className="flex items-center gap-2">
-            <BiTime className="text-specialOrange" size={20} />
+            <BiTime className="text-specialOrange" size={23} />
             <h3 className=" font-medium">Tempo médio de espera:</h3>
           </div>
           <span>{waitingTime} minutos</span>
         </div>
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <GiKnifeFork className="text-specialOrange" size={20} />
+            <GiKnifeFork className="text-specialOrange" size={23} />
             <h3 className="font-medium">Serve bem até</h3>
           </div>
           <span>{peopleServed} pessoas</span>
