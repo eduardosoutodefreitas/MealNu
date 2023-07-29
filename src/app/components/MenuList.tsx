@@ -1,16 +1,13 @@
 import { prisma } from "@/lib/prisma";
 import MenuItem from "./MenuItem";
 
-async function getDishes() {
-  const dishes = await prisma.dish.findMany({});
-  return dishes;
-}
 const MenuList = async () => {
-  const dishes = await getDishes();
+  const dishes = await prisma.dish.findMany({});
   return (
     <div>
       {dishes.map((dish) => (
         <MenuItem
+          id={dish.id}
           description={dish.description}
           name={dish.name}
           imageUrl={dish.imageUrl}
