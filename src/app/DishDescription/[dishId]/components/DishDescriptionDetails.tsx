@@ -6,7 +6,7 @@ interface DishDescriptionDetailsProps {
   name: string;
   description: string;
   waitingTime: number;
-  peopleServed: string;
+  peopleServed: number;
 }
 
 const DishDescriptionDetails = ({

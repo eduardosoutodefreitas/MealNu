@@ -30,7 +30,7 @@ const DishDetailsPage = async ({ params }: DishDetailsPageInterface) => {
       <DishDescriptionDetails
         name={dish.name}
         description={dish.description}
-        peopleServed={dish.description}
+        peopleServed={dish.peopleServed}
         waitingTime={dish.waitingTime}
       />
       <DishDescriptionFooter price={dish.price.toString()} />
