@@ -1,11 +1,19 @@
-import { prisma } from "@/lib/prisma";
+"use client";
+import { Dish } from "@prisma/client";
 import MenuItem from "./MenuItem";
-
-const MenuList = async () => {
-  const dishes = await prisma.dish.findMany({});
+import { useContext } from "react";
+import { MenuContext } from "@/contexts/MenuContext";
+interface MenuListProps {
+  dishes: Dish[];
+}
+const MenuList = ({ dishes }: MenuListProps) => {
+  const { selectedTag } = useContext(MenuContext);
+  const filteredMenuList = selectedTag
+    ? dishes.filter((dish) => dish.foodCategory === selectedTag.name)
+    : dishes;
   return (
     <div>
-      {dishes.map((dish) => (
+      {filteredMenuList.map((dish) => (
         <MenuItem
           id={dish.id}
           description={dish.description}
