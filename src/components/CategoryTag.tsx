@@ -12,7 +12,7 @@ const CategoryTag = ({
 }: CategoryTagProps) => {
   const tagClasses = isSelected
     ? "bg-specialOrange text-white "
-    : "bg-veryLightGray text-black";
+    : "bg-veryLightGray text-black dark:bg-secundaryDark dark:text-white";
   return (
     <div
       onClick={onClick}

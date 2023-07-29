@@ -14,7 +14,7 @@ const MenuSearch = () => {
       )}
       {!searchIsOpen && (
         <button onClick={handleButtonClick}>
-          <BiSearchAlt size={15} className="text-darkGray cursor-pointer" />
+          <BiSearchAlt size={15} className="text-darkGray cursor-pointer dark:text-white" />
         </button>
       )}
     </>
