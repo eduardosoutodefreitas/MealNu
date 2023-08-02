@@ -8,14 +8,16 @@ const DishDescriptionBanner = ({
   imageUrl,
 }: DishDescriptionBannerProps) => {
   return (
-    <div className="w-full aspect-video relative mt-2 mb-3">
+    <div className="relative w-full h-[180px] sm:h-[250px] md:h-[320px] lg:h-[400px] mt-2 mb-3">
       <Image
         fill
         src={imageUrl}
         alt={name}
+        className="rounded-lg"
         style={{
-          objectFit: "cover",
+          "objectFit": "cover",
         }}
+        sizes="(max-width: 768) 100vw, 700px"
       />
     </div>
   );

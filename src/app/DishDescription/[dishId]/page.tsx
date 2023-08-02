@@ -24,7 +24,7 @@ const DishDetailsPage = async ({ params }: DishDetailsPageInterface) => {
 
   if (!dish) return null;
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-5 sm:px-0">
       <DishDescriptionHeader />
       <DishDescriptionBanner imageUrl={dish.imageUrl} name={dish.name} />
       <DishDescriptionDetails
