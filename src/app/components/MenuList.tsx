@@ -1,17 +1,17 @@
 "use client";
 import { Dish } from "@prisma/client";
 import MenuItem from "./MenuItem";
-import useMenuListFilter from "@/hooks/UseMenuListFilter";
+import useMenuListFilter from "@/hooks/useMenuListFilter";
 interface MenuListProps {
   dishes: Dish[];
 }
 const MenuList = ({ dishes }: MenuListProps) => {
-  const {filterBySearch, filterByTag} = useMenuListFilter()
+  const { filterBySearch, filterByTag } = useMenuListFilter()
 
   const filteredDishes = dishes.filter((dish) => filterByTag(dish) && filterBySearch(dish));
 
   return (
-    <div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {filteredDishes.length === 0 ? (
         <p>Nenhum produto encontrado.</p>
       ) : (
