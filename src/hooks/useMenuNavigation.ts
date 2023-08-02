@@ -11,9 +11,8 @@ const useMenuNavigation = () => {
       setSelectedTag(foodCategory); // Marca a categoria se ela não estiver selecionada
     }
   };
-  const NavigationTagsClasses = searchIsOpen ? "hidden" : ''
   return {
-    handleCategoryTagClick, NavigationTagsClasses, selectedTag
+    handleCategoryTagClick, selectedTag, searchIsOpen
   }
 }
 

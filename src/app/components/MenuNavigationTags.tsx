@@ -1,17 +1,16 @@
 "use client";
 import CategoryTag from "@/components/CategoryTag";
-import { MenuContext } from "@/contexts/MenuContext";
 import useMenuNavigation from "@/hooks/useMenuNavigation";
 import { FoodCategory } from "@prisma/client";
-import React, { useContext } from "react";
 
 interface MenuNavigationTagsProps {
   foodCategories: FoodCategory[];
 }
 const MenuNavigationTags = ({ foodCategories }: MenuNavigationTagsProps) => {
-  const { NavigationTagsClasses, selectedTag, handleCategoryTagClick } = useMenuNavigation()
+  const { searchIsOpen, selectedTag, handleCategoryTagClick } = useMenuNavigation()
+  const NavigationTagsClasses = searchIsOpen ? "hidden" : ''
   return (
-    <div className={`flex gap-2 items-center overflow-x-hidden ${NavigationTagsClasses}`}>
+    <div className={`flex gap-4 items-center overflow-x-auto scrollbar-none ${NavigationTagsClasses}`}>
       {foodCategories.map((foodCategory) => (
         <CategoryTag
           foodCategory={foodCategory}

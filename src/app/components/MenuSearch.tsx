@@ -13,7 +13,7 @@ const MenuSearch = () => {
         <MenuSearchInput />
       )}
       {!searchIsOpen && (
-        <button className="transition-all duration-1000 ease-in-out w-[20px]" onClick={handleButtonClick}>
+        <button onClick={handleButtonClick}>
           <BiSearchAlt size={15} className="text-darkGray cursor-pointer" />
         </button>
       )}

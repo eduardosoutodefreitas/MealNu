@@ -16,7 +16,7 @@ const CategoryTag = ({
   return (
     <div
       onClick={onClick}
-      className={`text-xs py-1 px-5 whitespace-nowrap rounded-lg cursor-pointer ${tagClasses}`}
+      className={`text-xs py-1 px-5 sm:text-sm whitespace-nowrap rounded-lg cursor-pointer ${tagClasses}`}
     >
       {foodCategory.name}
     </div>
