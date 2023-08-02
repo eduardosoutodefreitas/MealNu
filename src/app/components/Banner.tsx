@@ -1,18 +1,12 @@
-import Image from 'next/image'
-const Banner = () => {
-  return (
-    <div className="relative w-full aspect-video mt-2">
-    <Image
-      fill
-      src="/banner.jpg"
-      alt="restaurant banner"
-      className=" rounded-lg"
-      style={{
-        objectFit: "cover",
-      }}
-    />
-  </div>
-  )
-}
+import { prisma } from "@/lib/prisma";
 
-export default Banner
+import BannerSlider from "./BannerSlider";
+
+const Banner = async () => {
+  const banners = await prisma.restaurantEvent.findMany({})
+  return (
+    <BannerSlider banners={banners} />
+  );
+};
+
+export default Banner;
