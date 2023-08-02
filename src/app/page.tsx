@@ -1,4 +1,5 @@
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import MenuNavigation from "./components/MenuNavigation";
@@ -10,6 +11,7 @@ export default function Home() {
       <Banner />
       <MenuNavigation />
       <Menu />
+      <Footer />
     </div>
   );
 }
