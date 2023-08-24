@@ -27,7 +27,7 @@ const BannerSlider = ({ banners }: BannerSliderProps) => {
             className="mySwiper">
             {banners.map(banner => (
                 <SwiperSlide key={banner.id}>
-                    <div className="relative w-full h-[180px] sm:h-[250px] md:h-[320px] lg:h-[400px] mt-2">
+                    <div className="relative w-full h-[180px] sm:h-[250px] md:h-[320px] mt-2">
                         <Image
                             fill
                             src={banner.bannerUrl}

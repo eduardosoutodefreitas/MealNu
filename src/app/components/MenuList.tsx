@@ -11,7 +11,7 @@ const MenuList = ({ dishes }: MenuListProps) => {
   const filteredDishes = dishes.filter((dish) => filterByTag(dish) && filterBySearch(dish));
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[60vh]">
       {filteredDishes.length === 0 ? (
         <p>Nenhum produto encontrado.</p>
       ) : (

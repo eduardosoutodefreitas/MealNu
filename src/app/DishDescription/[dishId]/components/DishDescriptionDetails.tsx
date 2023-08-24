@@ -19,9 +19,9 @@ const DishDescriptionDetails = ({
     <>
       <div>
         <h2 className="mb-2 font-semibold">{name}</h2>
-        <p className="text-sm mb-3">{description}</p>
+        <p className="text-sm">{description}</p>
       </div>
-      <div className="font-semibold mb-5">
+      <div className="font-semibold my-5">
         <div className="flex justify-between items-center mb-1">
           <div className="flex items-center gap-2">
             <BiTime className="text-specialOrange" size={23} />
