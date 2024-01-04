@@ -15,6 +15,7 @@ const nextConfig = {
         hostname: "i.pinimg.com",
       },
     ],
+    unoptimized: true
   },
 };
 
