@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import prisma from "@/lib/prisma";
 import MenuList from "./MenuList";
 
 const Menu = async () => {

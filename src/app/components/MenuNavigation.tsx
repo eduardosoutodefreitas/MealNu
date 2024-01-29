@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import prisma from "@/lib/prisma";
 import MenuNavigationTags from "./MenuNavigationTags";
 import MenuSearch from "./MenuSearch";
 

@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import prisma from "@/lib/prisma";
 
 import DishDescriptionHeader from "./components/DishDescriptionHeader";
 import DishDescriptionBanner from "./components/DishDescriptionBanner";
