@@ -6,12 +6,14 @@ interface MenuListProps {
   dishes: Dish[];
 }
 const MenuList = ({ dishes }: MenuListProps) => {
-  const { filterBySearch, filterByTag } = useMenuListFilter()
+  const { filterBySearch, filterByTag } = useMenuListFilter();
 
-  const filteredDishes = dishes.filter((dish) => filterByTag(dish) && filterBySearch(dish));
+  const filteredDishes = dishes.filter(
+    (dish) => filterByTag(dish) && filterBySearch(dish)
+  );
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 min-h-[60vh]">
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-4  px-5'>
       {filteredDishes.length === 0 ? (
         <p>Nenhum produto encontrado.</p>
       ) : (
@@ -29,6 +31,5 @@ const MenuList = ({ dishes }: MenuListProps) => {
     </div>
   );
 };
-
 
 export default MenuList;
